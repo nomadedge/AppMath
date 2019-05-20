@@ -7,16 +7,52 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "lab02", "lab02\lab02.pyproj
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "lab03", "lab03\lab03.pyproj", "{1CD0377F-4B94-428F-9CE7-8CCAD4B9C6F3}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "project", "project\project.pyproj", "{D7105570-0800-4486-9C53-A1C2426061D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{E3DD6220-ECFF-4BFE-B025-58D241D7CFA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3DD6220-ECFF-4BFE-B025-58D241D7CFA0}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{E3DD6220-ECFF-4BFE-B025-58D241D7CFA0}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{E3DD6220-ECFF-4BFE-B025-58D241D7CFA0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E3DD6220-ECFF-4BFE-B025-58D241D7CFA0}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{E3DD6220-ECFF-4BFE-B025-58D241D7CFA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3DD6220-ECFF-4BFE-B025-58D241D7CFA0}.Release|ARM.ActiveCfg = Release|Any CPU
+		{E3DD6220-ECFF-4BFE-B025-58D241D7CFA0}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{E3DD6220-ECFF-4BFE-B025-58D241D7CFA0}.Release|x64.ActiveCfg = Release|Any CPU
+		{E3DD6220-ECFF-4BFE-B025-58D241D7CFA0}.Release|x86.ActiveCfg = Release|Any CPU
 		{1CD0377F-4B94-428F-9CE7-8CCAD4B9C6F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CD0377F-4B94-428F-9CE7-8CCAD4B9C6F3}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{1CD0377F-4B94-428F-9CE7-8CCAD4B9C6F3}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{1CD0377F-4B94-428F-9CE7-8CCAD4B9C6F3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1CD0377F-4B94-428F-9CE7-8CCAD4B9C6F3}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{1CD0377F-4B94-428F-9CE7-8CCAD4B9C6F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CD0377F-4B94-428F-9CE7-8CCAD4B9C6F3}.Release|ARM.ActiveCfg = Release|Any CPU
+		{1CD0377F-4B94-428F-9CE7-8CCAD4B9C6F3}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{1CD0377F-4B94-428F-9CE7-8CCAD4B9C6F3}.Release|x64.ActiveCfg = Release|Any CPU
+		{1CD0377F-4B94-428F-9CE7-8CCAD4B9C6F3}.Release|x86.ActiveCfg = Release|Any CPU
+		{D7105570-0800-4486-9C53-A1C2426061D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7105570-0800-4486-9C53-A1C2426061D8}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{D7105570-0800-4486-9C53-A1C2426061D8}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{D7105570-0800-4486-9C53-A1C2426061D8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D7105570-0800-4486-9C53-A1C2426061D8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D7105570-0800-4486-9C53-A1C2426061D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7105570-0800-4486-9C53-A1C2426061D8}.Release|ARM.ActiveCfg = Release|Any CPU
+		{D7105570-0800-4486-9C53-A1C2426061D8}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{D7105570-0800-4486-9C53-A1C2426061D8}.Release|x64.ActiveCfg = Release|Any CPU
+		{D7105570-0800-4486-9C53-A1C2426061D8}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
