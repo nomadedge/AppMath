@@ -176,7 +176,7 @@ train2 = [
     ([1, 1, 1], 0),
     ]
 epochs = 7000
-learning_rate = 0.12
+learning_rate = 0.1
 loss = []
 
 t2 = task2(learning_rate = learning_rate)
