@@ -4,8 +4,8 @@ import matplotlib.pyplot as pyplot
 
 class task1(object):
     def __init__(self, learning_rate=0.1):
-        self.weights_0_1 = numpy.random.random_sample((100, 2)) * 2 - 1
-        self.weights_1_2 = numpy.random.random_sample((1, 100)) * 2 - 1
+        self.weights_0_1 = numpy.random.random_sample((17, 2)) * 2 - 1
+        self.weights_1_2 = numpy.random.random_sample((1, 17)) * 2 - 1
         self.sigmoid_mapper = numpy.vectorize(self.sigmoid)
         self.lin_mapper = numpy.vectorize(self.lin)
         self.learning_rate = numpy.array([learning_rate])
@@ -98,7 +98,7 @@ leftBorder = -10
 rightBorder = 10
 n = 1000
 x = numpy.linspace(leftBorder, rightBorder, n)
-epochs = 2000
+epochs = 10000
 learning_rate = 0.00045
 loss = []
 t1 = task1(learning_rate=learning_rate)
@@ -130,7 +130,7 @@ for e in range(epochs):
     # t1.train(numpy.array(inp), b)
     # inumpyuts_.append(numpy.array(inp))
     # correct_predictions.append(numpy.array(b))
-    eps = 0.02
+    eps = 0.01
     n = 0
     ma = 0
     for d in range(0, 1000):
@@ -145,7 +145,8 @@ for e in range(epochs):
             ma = di
     print(n / 1000)
     print(ma)
-    #train_loss = MSE(t1.predict(numpy.array(inumpyuts_).T), numpy.array(correct_predictions))
+    #train_loss = MSE(t1.predict(numpy.array(inumpyuts_).T),
+    #numpy.array(correct_predictions))
     loss.append(ma)
 
 # eps = 0.02
@@ -160,51 +161,52 @@ for e in range(epochs):
 #         n += 1
 # print(n / 10000)
 pyplot.plot(loss)
-pyplot.ylabel('MSE')
+pyplot.ylabel('max epsilon')
 pyplot.xlabel('epoch')
 pyplot.show()
 
-# train2 = [
-#    ([0, 0, 0], 1),
-#    ([0, 0, 1], 0),
-#    ([0, 1, 0], 0),
-#    ([0, 1, 1], 1),
-#    ([1, 0, 0], 0),
-#    ([1, 0, 1], 0),
-#    ([1, 1, 0], 0),
-#    ([1, 1, 1], 0),
-#    ]
-# epochs = 7000
-# learning_rate = 0.12
-# loss = []
+train2 = [
+    ([0, 0, 0], 1),
+    ([0, 0, 1], 0),
+    ([0, 1, 0], 0),
+    ([0, 1, 1], 1),
+    ([1, 0, 0], 0),
+    ([1, 0, 1], 0),
+    ([1, 1, 0], 0),
+    ([1, 1, 1], 0),
+    ]
+epochs = 7000
+learning_rate = 0.12
+loss = []
 
-# t2 = task2(learning_rate = learning_rate)
+t2 = task2(learning_rate = learning_rate)
 
-# for e in range(epochs):
-#    inumpyuts_ = []
-#    correct_predictions = []
-#    for inumpyut_stat, correct_predict in train2:
-#        t2.train(numpy.array(inumpyut_stat), correct_predict)
-#        inumpyuts_.append(numpy.array(inumpyut_stat))
-#        correct_predictions.append(numpy.array(correct_predict))
-#    train_loss = MSE(t2.predict(numpy.array(inumpyuts_).T), numpy.array(correct_predictions))
-#    loss.append(train_loss)
+for e in range(epochs):
+    print(e)
+    inumpyuts_ = []
+    correct_predictions = []
+    for inumpyut_stat, correct_predict in train2:
+        t2.train(numpy.array(inumpyut_stat), correct_predict)
+        inumpyuts_.append(numpy.array(inumpyut_stat))
+        correct_predictions.append(numpy.array(correct_predict))
+    train_loss = MSE(t2.predict(numpy.array(inumpyuts_).T), numpy.array(correct_predictions))
+    loss.append(train_loss)
 
-# for inumpyut_stat, correct_predict in train2:
-#    print("For inumpyut: {} the prediction is: {}, expected: {}".format(
-#        str(inumpyut_stat),
-#        str(t2.predict(numpy.array(inumpyut_stat)) > .5),
-#        str(correct_predict == 1)))
+for inumpyut_stat, correct_predict in train2:
+    print("For inumpyut: {} the prediction is: {}, expected: {}".format(
+        str(inumpyut_stat),
+        str(t2.predict(numpy.array(inumpyut_stat)) > .5),
+        str(correct_predict == 1)))
 
-# print()
+print()
 
-# for inumpyut_stat, correct_predict in train2:
-#    print("For inumpyut: {} the prediction is: {}, expected: {}".format(
-#        str(inumpyut_stat),
-#        str(t2.predict(numpy.array(inumpyut_stat))),
-#        str(correct_predict == 1)))
+for inumpyut_stat, correct_predict in train2:
+    print("For inumpyut: {} the prediction is: {}, expected: {}".format(
+        str(inumpyut_stat),
+        str(t2.predict(numpy.array(inumpyut_stat))),
+        str(correct_predict == 1)))
 
-# pyplot.plot(loss)
-# pyplot.ylabel('MSE')
-# pyplot.xlabel('epoch')
-# pyplot.show()
+pyplot.plot(loss)
+pyplot.ylabel('MSE')
+pyplot.xlabel('epoch')
+pyplot.show()
